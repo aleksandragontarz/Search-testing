@@ -17,7 +17,8 @@ Feature: Searching for "semrush" on Bing with content filters
     When I search for "semrush"
     Then I should see all results related to "semrush"
 
-  Scenario: Searching for " semrush" with a leading space
+  Scenario: Searching for " semrush" with a leading space and filtering by maps
     Given I am on bing.com
     When I search for " semrush"
+    And I filter results by "Maps" 
     Then I should see results related to "semrush" ignoring the leading space
